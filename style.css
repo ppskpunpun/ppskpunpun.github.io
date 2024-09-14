@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Mono", monospace;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(39, 39, 39);
+    gap: 2rem;
+    padding: 5rem;
+}
+
+a {
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: all 0.5s ease;
+}
+
+a:hover {
+    background-color: rgb(146, 204, 255);
+    transform: translateY(-10px); 
+}
+
+a::after {
+    margin: 0;
+    content: attr(info);
+    transition: .1s all linear;
+    font-size: 0;
+    max-width: 300px;
+}
+
+a:hover::after {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
