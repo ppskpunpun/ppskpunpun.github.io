@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>simple-calculator</title>
+</head>
+<body>
+<div id="root">
+    <main class="calculator-container">
+        <!-- row 1 -->
+        <input type="text" id="display" readonly>
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="7" onclick="input('7')"> 
+        </div>
+        <!-- row 2 -->
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="8" onclick="input('8')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="9" onclick="input('9')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn fn-btn" value="&leftarrow;" onclick="backspace()"> 
+        </div>
+        <!-- row 3 -->
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="4" onclick="input('4')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="5" onclick="input('5')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="6" onclick="input('6')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn op-btn" value="+" onclick="input('+')"> 
+        </div>
+        <!-- row 4 -->
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="1" onclick="input('1')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="2" onclick="input('2')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="3" onclick="input('3')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn op-btn" value="-" onclick="input('-')"> 
+        </div>
+        <!-- row 5 -->
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="." onclick="input('.')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn digit-btn" value="0" onclick="input('0')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn op-btn" value="/" onclick="input('/')"> 
+        </div>
+        <div class="btn-wrapper">
+            <input type="button" class="btn op-btn" value="x" onclick="input('*')"> 
+        </div>
+        <!-- row 6 -->
+        <div class="btn-wrapper span-2-cols">
+            <input type="button" class="btn fn-btn" value="C" onclick="clearInput()"> 
+        </div>
+        <div class="btn-wrapper span-2-cols">
+            <input type="button" class="btn fn-btn" value="=" onclick="calculate()">
+        </div>
+    
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

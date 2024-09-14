@@ -1,0 +1,102 @@
+:root {
+    --calculator-body-color: #042440;
+    --calculator-display-color: #1C304A;
+    --calculator-glow: rgba(31, 59, 123, 0.568);
+    --digit-btn-color: #A2BEDC;
+    --fn-btn-color: #D26B9D;
+    --op-btn-color: #4E499E;
+    --white: rgb(241, 241, 241);
+    --black: rgb(10, 10, 10);
+}
+
+* {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    font-family: "SUSE", sans-serif;
+    font-style: normal;
+}
+
+body {   
+    background-color: var(--calculator-body-color);
+}
+
+#root {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px repeat(5, 1fr);
+    width: 625px;
+    height: 500px;
+    background-color: var(--calculator-body-color); 
+    gap: 1.5rem; 
+    padding: 3rem 1.5rem;
+    border-radius: 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+    box-shadow: var(--calculator-glow) 0 0 90px 33px;
+}
+
+#display {
+   grid-column: 1 / 5;
+   font-size: 1.6rem;
+   text-align: right;
+   background: radial-gradient(var(--calculator-display-color), var(--calculator-body-color)); 
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+   /* background-color: var(--calculator-display-color); */
+   color: var(--white);
+   border-style: solid;
+   border-color: var(--black);
+   border-width: 1px;
+   border-radius: 12px;
+   padding: 1rem;
+}
+
+.span-2-cols {
+    grid-column: auto / span 2;
+}
+
+.btn-wrapper {
+    background-color: var(--white); 
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    border-width: 0;
+    border-radius: 12px;
+    transform: translateY(-6px);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.65, 0, 0.35, 1) 0s;
+    font-weight: bold;
+}
+
+.btn:hover { 
+    transform: translateY(-8px);
+}
+
+.btn:active {
+    transform: translateY(-2px);
+}
+
+.digit-btn {
+    color: var(--calculator-body-color);
+    background-color: var(--digit-btn-color);
+}
+
+.op-btn {
+    color: var(--white);
+    background-color: var(--op-btn-color);
+}
+
+.fn-btn {
+    color: var(--white); 
+    background-color: var(--fn-btn-color);
+}
